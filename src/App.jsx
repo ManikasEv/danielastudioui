@@ -7,6 +7,9 @@ import Hero from './components/sections/Hero'
 import Property from './components/sections/Property'
 import Commercial from './components/sections/Commercial'
 import Websites from './components/sections/Websites'
+import Portfolio from './components/sections/Portfolio'
+import Packages from './components/sections/Packages'
+import Partners from './components/sections/Partners'
 import Method from './components/sections/Method'
 import Contact from './components/sections/Contact'
 
@@ -16,11 +19,14 @@ function App() {
       <SmoothScroll>
         <Nav />
         <JourneyMap />
-        <main>
+        <main className="min-w-0 overflow-x-hidden">
           <Hero />
           <Property />
           <Commercial />
           <Websites />
+          <Portfolio />
+          <Packages />
+          <Partners />
           <Method />
           <Contact />
         </main>

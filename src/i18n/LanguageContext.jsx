@@ -15,7 +15,9 @@ function readInitialLocale() {
   const saved = window.localStorage.getItem('ds-lang')
   if (LOCALES.includes(saved)) return saved
   const nav = (navigator.language || 'en').toLowerCase()
-  return nav.startsWith('de') ? 'de' : 'en'
+  if (nav.startsWith('de')) return 'de'
+  if (nav.startsWith('hr') || nav.startsWith('hr-')) return 'hr'
+  return 'en'
 }
 
 export function LanguageProvider({ children }) {
@@ -37,13 +39,13 @@ export function LanguageProvider({ children }) {
       for (const part of parts) {
         node = node?.[part]
       }
-      if (typeof node === 'string') return node
-      // fallback to English
+      if (typeof node === 'string' || Array.isArray(node)) return node
       let en = translations.en
       for (const part of parts) {
         en = en?.[part]
       }
-      return typeof en === 'string' ? en : path
+      if (typeof en === 'string' || Array.isArray(en)) return en
+      return path
     },
     [locale],
   )

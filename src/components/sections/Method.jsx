@@ -17,6 +17,7 @@ export default function Method() {
       mediaAlt={t('method.mediaAlt')}
       mediaCaption={t('method.mediaCaption')}
       mediaLeft={false}
+      stackTitle
     />
   )
 }

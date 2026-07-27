@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" fill="none">
+  <rect width="320" height="120" rx="8" fill="#0E1612"/>
+  <circle cx="48" cy="60" r="22" stroke="#10B981" stroke-width="3"/>
+  <path d="M38 60 L46 68 L62 48" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="86" y="68" fill="#E8EFE9" font-family="system-ui,sans-serif" font-size="28" font-weight="700" letter-spacing="-0.5">Higgsfield</text>
+  <text x="248" y="68" fill="#10B981" font-family="system-ui,sans-serif" font-size="22" font-weight="600">AI</text>
+</svg>

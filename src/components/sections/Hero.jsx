@@ -17,11 +17,11 @@ export default function Hero() {
       <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/50 to-ink/20" />
       <div className="grain absolute inset-0" />
 
-      <div className="relative z-10 mx-auto w-full max-w-7xl px-5 pb-[8.75rem] pt-28 sm:px-6 sm:pb-28 md:px-8 md:pb-32">
+      <div className="relative z-10 mx-auto w-full min-w-0 max-w-7xl px-4 pb-[8.75rem] pt-28 sm:px-6 sm:pb-28 md:px-8 md:pb-32 lg:pr-24 xl:pr-28">
         <p className="mb-4 font-body text-xs font-semibold uppercase tracking-[0.28em] text-emerald sm:mb-5 sm:text-sm">
           {t('hero.eyebrow')}
         </p>
-        <h1 className="max-w-4xl font-display text-[3.25rem] font-extrabold leading-[0.88] tracking-tight text-paper text-balance sm:text-6xl md:text-7xl xl:text-8xl">
+        <h1 className="max-w-4xl break-words font-display text-[2.75rem] font-extrabold leading-[0.88] tracking-tight text-paper text-balance sm:text-6xl md:text-7xl xl:text-8xl">
           {t('hero.brand')}
           <span className="block text-emerald">{t('hero.brandAccent')}</span>
         </h1>

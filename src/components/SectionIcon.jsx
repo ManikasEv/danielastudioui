@@ -55,6 +55,50 @@ const paths = {
       strokeLinejoin="round"
     />
   ),
+  frames: (
+    <>
+      <rect
+        x="3"
+        y="6"
+        width="12"
+        height="12"
+        rx="1"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      />
+      <path
+        d="M9 4 H19 A1 1 0 0 1 20 5 V15"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </>
+  ),
+  box: (
+    <path
+      d="M4 8 L12 4 L20 8 V16 L12 20 L4 16 Z M4 8 L12 12 L20 8 M12 12 V20"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.6"
+      strokeLinejoin="round"
+      strokeLinecap="round"
+    />
+  ),
+  partners: (
+    <>
+      <circle cx="9" cy="8" r="3" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <circle cx="16" cy="9" r="2.5" fill="none" stroke="currentColor" strokeWidth="1.6" />
+      <path
+        d="M3 19 C3 15.5 5.5 14 9 14 C11 14 12.5 14.5 13.5 15.5 M14 19 C14 16.5 15 15 16 15 C18.5 15 21 16.5 21 19"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+        strokeLinecap="round"
+      />
+    </>
+  ),
   send: (
     <path
       d="M4 12 L20 4 L13 20 L11 13 Z"

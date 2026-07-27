@@ -18,17 +18,33 @@
 @layer base {
   html {
     -webkit-text-size-adjust: 100%;
+    overflow-x: hidden;
+    max-width: 100%;
   }
 
   body {
     @apply bg-ink text-paper font-body antialiased;
+    overflow-x: hidden;
+    max-width: 100%;
     background-image:
       radial-gradient(ellipse 80% 50% at 10% -10%, rgb(16 185 129 / 0.12), transparent),
       radial-gradient(ellipse 60% 40% at 100% 20%, rgb(6 78 59 / 0.35), transparent);
   }
 
+  #root {
+    overflow-x: hidden;
+    max-width: 100%;
+  }
+
   ::selection {
     @apply bg-emerald text-ink;
+  }
+
+  img,
+  video,
+  canvas,
+  svg {
+    max-width: 100%;
   }
 }
 
@@ -39,6 +55,19 @@
 
   .text-balance {
     text-wrap: balance;
+  }
+
+  /* Left-edge sections — same inset as MediaSection copy, not centered */
+  .section-shell {
+    @apply relative w-full min-w-0 overflow-x-hidden border-t border-line;
+    @apply px-4 py-14 pb-24;
+    @apply sm:px-6 sm:py-20;
+    @apply lg:pl-8 lg:pr-24 lg:pb-24;
+    @apply xl:pl-10 xl:pr-28;
+  }
+
+  .section-inner {
+    @apply w-full min-w-0;
   }
 
   .grain::after {

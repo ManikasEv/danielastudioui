@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 120" fill="none">
+  <rect width="320" height="120" rx="8" fill="#0E1612"/>
+  <rect x="28" y="38" width="36" height="44" rx="4" stroke="#10B981" stroke-width="3"/>
+  <path d="M36 52 H56 M36 62 H56 M36 72 H50" stroke="#10B981" stroke-width="2.5" stroke-linecap="round"/>
+  <text x="82" y="70" fill="#E8EFE9" font-family="system-ui,sans-serif" font-size="30" font-weight="700" letter-spacing="-0.5">Hostpoint</text>
+</svg>
