@@ -122,17 +122,11 @@ export default function Contact() {
       </div>
 
       {/* Form — right */}
-      <div className="relative order-2 flex min-w-0 items-center px-4 py-14 pb-28 sm:px-6 sm:py-16 lg:px-10 lg:pb-16 lg:pr-24 xl:px-12 xl:pr-28">
+      <div className="section-copy order-2 section-copy-rail pb-28 lg:pb-16">
         <div className="w-full min-w-0 max-w-xl">
-          <p className="mb-3 font-body text-sm font-semibold uppercase tracking-[0.22em] text-emerald sm:text-base">
-            {t('contact.eyebrow')}
-          </p>
-          <h2 className="break-words font-display text-[clamp(2.35rem,5.5vw,4.25rem)] font-extrabold leading-[0.92] tracking-tight text-paper text-balance">
-            {t('contact.title')}
-          </h2>
-          <p className="mt-5 text-lg leading-relaxed text-muted sm:mt-6 sm:text-xl md:text-2xl">
-            {t('contact.body')}
-          </p>
+          <p className="section-eyebrow">{t('contact.eyebrow')}</p>
+          <h2 className="section-title">{t('contact.title')}</h2>
+          <p className="section-lead !font-normal text-muted">{t('contact.body')}</p>
 
           {sent ? (
             <p className="mt-10 border border-emerald/40 bg-emerald-dim/40 px-5 py-4 text-base text-emerald-bright sm:text-lg">

@@ -9,15 +9,9 @@ export default function Packages() {
   return (
     <section id="packages" className="section-shell scroll-mt-0">
       <div className="section-inner">
-        <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.26em] text-emerald sm:text-xs">
-          {t('packages.eyebrow')}
-        </p>
-        <h2 className="max-w-3xl break-words font-display text-[clamp(2rem,5vw,3.75rem)] font-extrabold leading-[0.92] tracking-tight text-paper text-balance">
-          {t('packages.title')}
-        </h2>
-        <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted sm:text-lg">
-          {t('packages.lead')}
-        </p>
+        <p className="section-eyebrow">{t('packages.eyebrow')}</p>
+        <h2 className="section-title">{t('packages.title')}</h2>
+        <p className="section-lead !font-normal text-muted">{t('packages.lead')}</p>
 
         <div className="mt-12 space-y-14 sm:mt-14 sm:space-y-16">
           {GROUPS.map((group) => {
@@ -36,10 +30,10 @@ export default function Packages() {
               <div key={group} className="min-w-0">
                 <div className="mb-6 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
                   <div className="min-w-0">
-                    <h3 className="break-words font-display text-2xl font-extrabold tracking-tight text-paper sm:text-3xl">
+                    <h3 className="break-words font-display text-[clamp(1.75rem,3vw,2.25rem)] font-extrabold tracking-tight text-paper">
                       {t(`packages.${group}.title`)}
                     </h3>
-                    <p className="mt-2 max-w-xl text-sm text-muted sm:text-base">
+                    <p className="mt-2 max-w-xl text-base text-muted sm:text-lg">
                       {t(`packages.${group}.blurb`)}
                     </p>
                   </div>

@@ -13,6 +13,7 @@ export default function PortfolioCarousel({
   t,
   hint,
   labels,
+  mediaLeft = true,
 }) {
   const touchX = useRef(null)
   const count = items.length
@@ -62,7 +63,13 @@ export default function PortfolioCarousel({
       aria-label={labels.carousel}
     >
       <div className="grid min-w-0 lg:grid-cols-2">
-        <div className="relative min-h-[44vh] min-w-0 overflow-hidden bg-ink sm:min-h-[52vh] lg:min-h-[68vh]">
+        <div
+          className={[
+            'relative min-h-[48vh] min-w-0 overflow-hidden bg-ink sm:min-h-[55vh] lg:min-h-[70vh]',
+            'order-1',
+            mediaLeft ? 'lg:order-1' : 'lg:order-2',
+          ].join(' ')}
+        >
           <SlideMedia
             key={item.id}
             item={item}
@@ -72,86 +79,89 @@ export default function PortfolioCarousel({
           />
         </div>
 
-        <div className="relative flex min-w-0 flex-col justify-center px-5 py-10 sm:px-8 sm:py-12 lg:px-10 xl:px-12">
-          <div className="mb-5 flex min-w-0 items-center justify-between gap-3 sm:mb-6">
-            <p className="min-w-0 truncate text-sm font-semibold uppercase tracking-[0.2em] text-emerald sm:text-base">
-              {tag}
-            </p>
-            <p className="shrink-0 font-body text-sm tabular-nums tracking-[0.14em] text-muted sm:text-base">
-              {index + 1} / {count}
-            </p>
-          </div>
-
-          <FitText
-            as="h3"
-            min={28}
-            max={56}
-            className="font-display font-extrabold tracking-tight text-paper"
-          >
-            {title}
-          </FitText>
-          {host && (
-            <p className="mt-3 truncate font-body text-base tracking-wide text-emerald/90 sm:text-lg">
-              {host}
-            </p>
-          )}
-          <p className="mt-5 max-w-full break-words text-lg leading-relaxed text-muted sm:mt-6 sm:text-xl md:text-2xl">
-            {body}
-          </p>
-
-          {item.url && (
-            <a
-              href={item.url}
-              target="_blank"
-              rel="noreferrer"
-              className="mt-7 inline-flex max-w-full items-center gap-2 border-b border-emerald pb-1 text-base font-semibold uppercase tracking-[0.14em] text-paper transition hover:text-emerald sm:text-lg"
-            >
-              {labels.visit}
-              <span aria-hidden className="text-emerald">
-                →
-              </span>
-            </a>
-          )}
-
-          {count > 1 && (
-            <div className="mt-10 flex min-w-0 flex-wrap items-center gap-3">
-              <button
-                type="button"
-                onClick={() => go(-1)}
-                className="inline-flex size-12 shrink-0 items-center justify-center border border-line text-lg text-paper transition hover:border-emerald hover:text-emerald"
-                aria-label={labels.prev}
-              >
-                ←
-              </button>
-              <button
-                type="button"
-                onClick={() => go(1)}
-                className="inline-flex size-12 shrink-0 items-center justify-center border border-line text-lg text-paper transition hover:border-emerald hover:text-emerald"
-                aria-label={labels.next}
-              >
-                →
-              </button>
-
-              <div className="flex min-w-0 flex-1 flex-wrap gap-1.5" role="tablist">
-                {items.map((slide, i) => (
-                  <button
-                    key={slide.id}
-                    type="button"
-                    role="tab"
-                    aria-selected={i === index}
-                    aria-label={`${labels.slide} ${i + 1}`}
-                    onClick={() => onIndexChange(i)}
-                    className={[
-                      'h-1.5 shrink-0 transition-all',
-                      i === index
-                        ? 'w-7 bg-emerald'
-                        : 'w-1.5 bg-line hover:bg-muted',
-                    ].join(' ')}
-                  />
-                ))}
-              </div>
+        <div
+          className={[
+            'section-copy order-2 !min-h-0 lg:!min-h-[70vh]',
+            mediaLeft ? 'lg:order-2' : 'lg:order-1',
+          ].join(' ')}
+        >
+          <div className="w-full min-w-0">
+            <div className="mb-5 flex min-w-0 items-center justify-between gap-3 sm:mb-6">
+              <p className="section-tag min-w-0 truncate">{tag}</p>
+              <p className="section-meta shrink-0">
+                {index + 1} / {count}
+              </p>
             </div>
-          )}
+
+            <FitText
+              as="h3"
+              min={28}
+              max={56}
+              className="font-display font-extrabold tracking-tight text-paper"
+            >
+              {title}
+            </FitText>
+            {host && (
+              <p className="mt-3 truncate font-body text-base tracking-wide text-emerald/90 sm:text-lg">
+                {host}
+              </p>
+            )}
+            <p className="section-body !mt-5 sm:!mt-6">{body}</p>
+
+            {item.url && (
+              <a
+                href={item.url}
+                target="_blank"
+                rel="noreferrer"
+                className="section-cta"
+              >
+                {labels.visit}
+                <span aria-hidden className="text-emerald">
+                  →
+                </span>
+              </a>
+            )}
+
+            {count > 1 && (
+              <div className="mt-10 flex min-w-0 flex-wrap items-center gap-3">
+                <button
+                  type="button"
+                  onClick={() => go(-1)}
+                  className="inline-flex size-12 shrink-0 items-center justify-center border border-line text-lg text-paper transition hover:border-emerald hover:text-emerald"
+                  aria-label={labels.prev}
+                >
+                  ←
+                </button>
+                <button
+                  type="button"
+                  onClick={() => go(1)}
+                  className="inline-flex size-12 shrink-0 items-center justify-center border border-line text-lg text-paper transition hover:border-emerald hover:text-emerald"
+                  aria-label={labels.next}
+                >
+                  →
+                </button>
+
+                <div className="flex min-w-0 flex-1 flex-wrap gap-1.5" role="tablist">
+                  {items.map((slide, i) => (
+                    <button
+                      key={slide.id}
+                      type="button"
+                      role="tab"
+                      aria-selected={i === index}
+                      aria-label={`${labels.slide} ${i + 1}`}
+                      onClick={() => onIndexChange(i)}
+                      className={[
+                        'h-1.5 shrink-0 transition-all',
+                        i === index
+                          ? 'w-7 bg-emerald'
+                          : 'w-1.5 bg-line hover:bg-muted',
+                      ].join(' ')}
+                    />
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

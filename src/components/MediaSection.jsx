@@ -2,8 +2,7 @@ import FitText from './FitText'
 
 /**
  * Split section: full-bleed media + text.
- * On mobile, media always stacks first for clarity; desktop respects mediaLeft.
- * Copy always hugs the left edge of its column (same inset as .section-shell).
+ * Mobile: media stacks first. Desktop: mediaLeft toggles L/R zigzag.
  */
 export default function MediaSection({
   id,
@@ -17,7 +16,7 @@ export default function MediaSection({
   mediaAlt,
   mediaCaption,
   mediaType = 'image',
-  mediaLeft = false,
+  mediaLeft = true,
   stackTitle = false,
 }) {
   const titleLines = stackTitle
@@ -66,14 +65,20 @@ export default function MediaSection({
       />
       <div className="grain absolute inset-0" />
 
-      <div className="absolute inset-x-0 bottom-0 z-10 bg-gradient-to-t from-ink via-ink/70 to-transparent px-4 pb-5 pt-16 sm:px-6 sm:pb-7 lg:inset-x-auto lg:right-auto lg:bottom-6 lg:left-6 lg:bg-none lg:p-0 lg:pt-0">
+      <div
+        className={[
+          'absolute bottom-0 z-10 bg-gradient-to-t from-ink via-ink/70 to-transparent px-4 pb-5 pt-16 sm:px-6 sm:pb-7 lg:bg-none lg:p-0 lg:pt-0',
+          'inset-x-0 lg:inset-x-auto lg:bottom-6',
+          mediaLeft ? 'lg:left-6 lg:right-auto' : 'lg:right-6 lg:left-auto',
+        ].join(' ')}
+      >
         <div className="max-w-lg border border-emerald/35 bg-ink/80 px-4 py-3 backdrop-blur-md sm:px-5 sm:py-4 lg:bg-ink/75">
           {eyebrow && (
-            <p className="mb-1.5 font-body text-[10px] font-semibold uppercase tracking-[0.22em] text-emerald sm:text-[11px]">
+            <p className="mb-1.5 font-body text-xs font-semibold uppercase tracking-[0.2em] text-emerald sm:text-sm">
               {eyebrow}
             </p>
           )}
-          <p className="font-display text-xl font-extrabold leading-tight tracking-tight text-paper sm:text-2xl lg:text-lg">
+          <p className="font-display text-2xl font-extrabold leading-tight tracking-tight text-paper sm:text-3xl lg:text-2xl">
             {mediaCaption || title}
           </p>
         </div>
@@ -84,16 +89,12 @@ export default function MediaSection({
   const copy = (
     <div
       className={[
-        'relative flex min-w-0 items-center py-14 pb-24 sm:py-16 lg:min-h-screen lg:pb-16',
-        'px-4 sm:px-6 lg:px-8 xl:px-10',
-        'order-2',
-        mediaLeft ? 'lg:order-2 lg:pr-24 xl:pr-28' : 'lg:order-1',
+        'section-copy order-2',
+        mediaLeft ? 'lg:order-2 section-copy-rail' : 'lg:order-1',
       ].join(' ')}
     >
       <div className="w-full min-w-0">
-        <p className="mb-3 font-body text-[11px] font-semibold uppercase tracking-[0.26em] text-emerald sm:mb-4 sm:text-xs">
-          {eyebrow}
-        </p>
+        <p className="section-eyebrow">{eyebrow}</p>
 
         {titleLines ? (
           <h2 className="w-full min-w-0 font-display font-extrabold tracking-tight text-paper">
@@ -103,7 +104,7 @@ export default function MediaSection({
                 as="span"
                 wrapper="span"
                 wrapperClassName="block min-w-0 w-full overflow-hidden"
-                min={22}
+                min={28}
                 max={72}
                 className="font-display font-extrabold tracking-tight text-paper"
               >
@@ -112,24 +113,13 @@ export default function MediaSection({
             ))}
           </h2>
         ) : (
-          <h2 className="max-w-3xl break-words font-display text-[clamp(2rem,5.5vw,4.25rem)] font-extrabold leading-[0.92] tracking-tight text-paper text-balance">
-            {title}
-          </h2>
+          <h2 className="section-title">{title}</h2>
         )}
 
-        {lead && (
-          <p className="mt-5 max-w-2xl break-words text-lg font-medium leading-snug text-paper/90 sm:mt-6 sm:text-xl md:text-2xl">
-            {lead}
-          </p>
-        )}
-        <p className="mt-4 max-w-2xl break-words text-base leading-relaxed text-muted sm:mt-5 sm:text-lg">
-          {body}
-        </p>
+        {lead && <p className="section-lead">{lead}</p>}
+        <p className="section-body">{body}</p>
         {cta && (
-          <a
-            href={href}
-            className="mt-8 inline-flex min-h-11 items-center gap-3 border-b border-emerald pb-1 font-body text-sm font-semibold uppercase tracking-[0.18em] text-paper transition-colors hover:text-emerald sm:mt-10"
-          >
+          <a href={href} className="section-cta">
             {cta}
             <span aria-hidden className="text-emerald">
               →
