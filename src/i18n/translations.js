@@ -4,6 +4,7 @@ const en = {
   nav: {
     cta: 'Start a project',
     lang: 'Language',
+    ticket: 'Support ticket',
   },
   journey: {
     aria: 'Page journey',
@@ -312,12 +313,23 @@ const en = {
   footer: {
     line: 'AI video & web systems',
   },
+  ticket: {
+    eyebrow: 'Support',
+    title: 'Open a ticket',
+    lead: 'Tell us what you need — we receive it in the studio CRM and reply by email.',
+    subject: 'Subject',
+    submit: 'Submit ticket',
+    sending: 'Sending…',
+    success: 'Ticket received. We’ll get back to you soon.',
+    back: 'Back to site',
+  },
 }
 
 const de = {
   nav: {
     cta: 'Projekt starten',
     lang: 'Sprache',
+    ticket: 'Support-Ticket',
   },
   journey: {
     aria: 'Seitenverlauf',
@@ -626,12 +638,23 @@ const de = {
   footer: {
     line: 'KI-Video & Websysteme',
   },
+  ticket: {
+    eyebrow: 'Support',
+    title: 'Ticket eröffnen',
+    lead: 'Sagen Sie uns, was Sie brauchen — wir erhalten es im Studio-CRM und antworten per E-Mail.',
+    subject: 'Betreff',
+    submit: 'Ticket senden',
+    sending: 'Wird gesendet…',
+    success: 'Ticket erhalten. Wir melden uns bald.',
+    back: 'Zurück zur Website',
+  },
 }
 
 const hr = {
   nav: {
     cta: 'Započni projekt',
     lang: 'Jezik',
+    ticket: 'Support ticket',
   },
   journey: {
     aria: 'Putovanja stranicom',
@@ -939,6 +962,16 @@ const hr = {
   },
   footer: {
     line: 'AI video & web sustavi',
+  },
+  ticket: {
+    eyebrow: 'Support',
+    title: 'Otvori ticket',
+    lead: 'Recite nam što vam treba — primamo u studio CRM i odgovaramo e-mailom.',
+    subject: 'Naslov',
+    submit: 'Pošalji ticket',
+    sending: 'Šaljem…',
+    success: 'Ticket primljen. Javit ćemo se uskoro.',
+    back: 'Natrag na stranicu',
   },
 }
 

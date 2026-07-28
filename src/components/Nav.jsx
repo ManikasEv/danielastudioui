@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { useI18n } from '../i18n/LanguageContext'
 
 export default function Nav() {
@@ -36,6 +37,13 @@ export default function Nav() {
               </button>
             ))}
           </div>
+
+          <Link
+            to="/ticket"
+            className="font-body text-[10px] font-semibold uppercase tracking-[0.14em] text-muted transition-colors hover:text-emerald sm:text-[11px] sm:tracking-[0.18em] md:text-xs"
+          >
+            {t('nav.ticket')}
+          </Link>
 
           <a
             href="#contact"
