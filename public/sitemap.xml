@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml"
+>
+  <url>
+    <loc>https://adriaticwebestate.com/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://adriaticwebestate.com/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://adriaticwebestate.com/" />
+    <xhtml:link rel="alternate" hreflang="de" href="https://adriaticwebestate.com/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="de-DE" href="https://adriaticwebestate.com/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="de-CH" href="https://adriaticwebestate.com/?lang=de" />
+    <xhtml:link rel="alternate" hreflang="hr" href="https://adriaticwebestate.com/?lang=hr" />
+    <xhtml:link rel="alternate" hreflang="hr-HR" href="https://adriaticwebestate.com/?lang=hr" />
+    <xhtml:link rel="alternate" hreflang="el" href="https://adriaticwebestate.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="el-GR" href="https://adriaticwebestate.com/?lang=en" />
+    <xhtml:link rel="alternate" hreflang="en-CH" href="https://adriaticwebestate.com/" />
+    <xhtml:link rel="alternate" hreflang="en-GR" href="https://adriaticwebestate.com/" />
+  </url>
+  <url>
+    <loc>https://adriaticwebestate.com/ticket</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+</urlset>

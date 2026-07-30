@@ -87,7 +87,7 @@ export default function TicketPage() {
             to="/"
             className="font-display text-base font-extrabold tracking-tight sm:text-lg"
           >
-            Daniela<span className="text-emerald">Studio</span>
+            Adriatic<span className="text-emerald">WebEstate</span>
           </Link>
           <Link
             to="/"

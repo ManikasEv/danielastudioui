@@ -9,14 +9,23 @@ import {
 import { LOCALES, translations } from './translations'
 
 const LanguageContext = createContext(null)
+const STORAGE_KEY = 'awe-lang'
 
 function readInitialLocale() {
   if (typeof window === 'undefined') return 'en'
-  const saved = window.localStorage.getItem('ds-lang')
+
+  // SEO hreflang landing: ?lang=de|hr|en
+  const params = new URLSearchParams(window.location.search)
+  const fromQuery = (params.get('lang') || '').toLowerCase()
+  if (LOCALES.includes(fromQuery)) return fromQuery
+
+  const saved = window.localStorage.getItem(STORAGE_KEY)
   if (LOCALES.includes(saved)) return saved
+
   const nav = (navigator.language || 'en').toLowerCase()
   if (nav.startsWith('de')) return 'de'
-  if (nav.startsWith('hr') || nav.startsWith('hr-')) return 'hr'
+  if (nav.startsWith('hr')) return 'hr'
+  if (nav.startsWith('el')) return 'en' // Greece → English UI for now
   return 'en'
 }
 
@@ -25,7 +34,7 @@ export function LanguageProvider({ children }) {
 
   useEffect(() => {
     document.documentElement.lang = locale
-    window.localStorage.setItem('ds-lang', locale)
+    window.localStorage.setItem(STORAGE_KEY, locale)
   }, [locale])
 
   const setLocale = useCallback((next) => {

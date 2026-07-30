@@ -20,8 +20,8 @@ const en = {
   },
   hero: {
     eyebrow: 'AI video · Web systems',
-    brand: 'Daniela',
-    brandAccent: 'Studio',
+    brand: 'Adriatic',
+    brandAccent: 'WebEstate',
     tagline:
       'We create AI property films, AI commercial videos, and high-performance websites with SEO and databases.',
     ctaPrimary: 'See our services',
@@ -345,8 +345,8 @@ const de = {
   },
   hero: {
     eyebrow: 'KI-Video · Websysteme',
-    brand: 'Daniela',
-    brandAccent: 'Studio',
+    brand: 'Adriatic',
+    brandAccent: 'WebEstate',
     tagline:
       'Wir erstellen KI-Immobilienfilme, KI-Werbevideos und leistungsstarke Websites mit SEO und Datenbanken.',
     ctaPrimary: 'Leistungen ansehen',
@@ -641,7 +641,7 @@ const de = {
   ticket: {
     eyebrow: 'Support',
     title: 'Ticket eröffnen',
-    lead: 'Sagen Sie uns, was Sie brauchen — wir erhalten es im Studio-CRM und antworten per E-Mail.',
+    lead: 'Sagen Sie uns, was Sie brauchen — wir erhalten es im CRM und antworten per E-Mail.',
     subject: 'Betreff',
     submit: 'Ticket senden',
     sending: 'Wird gesendet…',
@@ -670,8 +670,8 @@ const hr = {
   },
   hero: {
     eyebrow: 'AI video · Web sustavi',
-    brand: 'Daniela',
-    brandAccent: 'Studio',
+    brand: 'Adriatic',
+    brandAccent: 'WebEstate',
     tagline:
       'Stvaramo AI filmove za nekretnine, AI reklamne videozapise i snažne web stranice sa SEO-om i bazama podataka.',
     ctaPrimary: 'Pogledaj usluge',

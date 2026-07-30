@@ -11,7 +11,7 @@ export default function Nav() {
           href="#hero"
           className="shrink-0 font-display text-base font-extrabold tracking-tight text-paper sm:text-lg md:text-xl"
         >
-          Daniela<span className="text-emerald">Studio</span>
+          Adriatic<span className="text-emerald">WebEstate</span>
         </a>
 
         <div className="flex items-center gap-2 sm:gap-4">

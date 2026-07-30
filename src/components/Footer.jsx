@@ -7,7 +7,7 @@ export default function Footer() {
     <footer className="overflow-x-hidden border-t border-line px-4 py-10 pb-24 sm:px-6 md:px-8 lg:pb-10 lg:pr-24 xl:pr-28">
       <div className="mx-auto flex w-full min-w-0 max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <p className="font-display text-lg font-extrabold tracking-tight">
-          Daniela<span className="text-emerald">Studio</span>
+          Adriatic<span className="text-emerald">WebEstate</span>
         </p>
         <p className="text-xs uppercase tracking-[0.2em] text-muted">
           © {new Date().getFullYear()} — {t('footer.line')}

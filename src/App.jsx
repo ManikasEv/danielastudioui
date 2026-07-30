@@ -3,6 +3,7 @@ import Nav from './components/Nav'
 import JourneyMap from './components/JourneyMap'
 import Footer from './components/Footer'
 import SmoothScroll from './components/SmoothScroll'
+import SeoHead from './components/SeoHead'
 import { LanguageProvider } from './i18n/LanguageContext'
 import Hero from './components/sections/Hero'
 import Property from './components/sections/Property'
@@ -39,6 +40,7 @@ function HomePage() {
 function App() {
   return (
     <LanguageProvider>
+      <SeoHead />
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<HomePage />} />

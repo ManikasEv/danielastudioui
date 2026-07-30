@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://adriaticwebestate.com/sitemap.xml
+Host: https://adriaticwebestate.com
