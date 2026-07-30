@@ -52,6 +52,8 @@ export default function SeoHead() {
     setMeta('property', 'og:locale', locale === 'de' ? 'de_DE' : locale === 'hr' ? 'hr_HR' : 'en_US')
     setMeta('name', 'twitter:title', meta.title)
     setMeta('name', 'twitter:description', meta.description)
+    setMeta('name', 'twitter:image', `${SITE}/og-cover.png`)
+    setMeta('property', 'og:image', `${SITE}/og-cover.png`)
 
     let canonical = document.head.querySelector('link[rel="canonical"]')
     if (!canonical) {

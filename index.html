@@ -2,7 +2,11 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Tab / Google favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/awe-logo.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="shortcut icon" href="/favicon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#070a09" />
 
@@ -61,7 +65,10 @@
       property="og:description"
       content="AI property films, AI commercials, and high-performance websites with SEO & databases — serving Germany, Croatia, Switzerland, and Greece."
     />
-    <meta property="og:image" content="https://adriaticwebestate.com/og-cover.jpg" />
+    <meta property="og:image" content="https://adriaticwebestate.com/og-cover.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="675" />
     <meta property="og:image:alt" content="Adriatic Web Estate — AI video and web systems" />
 
     <!-- Twitter -->
@@ -74,7 +81,7 @@
       name="twitter:description"
       content="AI property & commercial video plus SEO websites for DE, HR, CH, and GR."
     />
-    <meta name="twitter:image" content="https://adriaticwebestate.com/og-cover.jpg" />
+    <meta name="twitter:image" content="https://adriaticwebestate.com/og-cover.png" />
 
     <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
 
@@ -95,7 +102,13 @@
             "@id": "https://adriaticwebestate.com/#organization",
             "name": "Adriatic Web Estate",
             "url": "https://adriaticwebestate.com/",
-            "logo": "https://adriaticwebestate.com/favicon.svg",
+            "logo": {
+              "@type": "ImageObject",
+              "url": "https://adriaticwebestate.com/awe-logo.png",
+              "width": 512,
+              "height": 512
+            },
+            "image": "https://adriaticwebestate.com/og-cover.png",
             "description": "AI property video, AI commercial video, and SEO-ready websites with databases for real estate and brands across Germany, Croatia, Switzerland, and Greece.",
             "areaServed": [
               { "@type": "Country", "name": "Germany" },
@@ -119,7 +132,7 @@
             "@id": "https://adriaticwebestate.com/#service",
             "name": "Adriatic Web Estate",
             "url": "https://adriaticwebestate.com/",
-            "image": "https://adriaticwebestate.com/og-cover.jpg",
+            "image": "https://adriaticwebestate.com/og-cover.png",
             "priceRange": "$$",
             "areaServed": [
               { "@type": "Country", "name": "Germany" },
