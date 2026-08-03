@@ -12,10 +12,11 @@ export default function Websites() {
       lead={t('websites.lead')}
       body={t('websites.body')}
       cta={t('websites.cta')}
+      href="#packages"
       mediaSrc="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=1800&q=80"
       mediaAlt={t('websites.mediaAlt')}
       mediaCaption={t('websites.mediaCaption')}
-      mediaLeft
+      mediaLeft={false}
     />
   )
 }

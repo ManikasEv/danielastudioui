@@ -13,6 +13,7 @@ export default function Property() {
       lead={t('property.lead')}
       body={t('property.body')}
       cta={t('property.cta')}
+      href="#packages"
       mediaSrc={propertyVideo}
       mediaAlt={t('property.mediaAlt')}
       mediaCaption={t('property.mediaCaption')}

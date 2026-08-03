@@ -46,6 +46,13 @@ export default function Nav() {
           </Link>
 
           <a
+            href="#packages"
+            className="hidden font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-muted transition-colors hover:text-emerald sm:inline md:text-xs"
+          >
+            {t('nav.pricing')}
+          </a>
+
+          <a
             href="#contact"
             className="hidden font-body text-[11px] font-semibold uppercase tracking-[0.18em] text-paper transition-colors hover:text-emerald sm:inline md:text-xs"
           >

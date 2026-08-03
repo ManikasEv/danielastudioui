@@ -1,7 +1,7 @@
 import { useI18n } from '../../i18n/LanguageContext'
 import { contactHref } from './Contact'
 
-const GROUPS = ['property', 'commercial', 'website']
+const GROUPS = ['property', 'website']
 
 export default function Packages() {
   const { t } = useI18n()

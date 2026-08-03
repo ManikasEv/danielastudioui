@@ -6,13 +6,11 @@ import SmoothScroll from './components/SmoothScroll'
 import SeoHead from './components/SeoHead'
 import { LanguageProvider } from './i18n/LanguageContext'
 import Hero from './components/sections/Hero'
+import Offers from './components/sections/Offers'
 import Property from './components/sections/Property'
-import Commercial from './components/sections/Commercial'
 import Websites from './components/sections/Websites'
 import Portfolio from './components/sections/Portfolio'
 import Packages from './components/sections/Packages'
-import Partners from './components/sections/Partners'
-import Method from './components/sections/Method'
 import Contact from './components/sections/Contact'
 import TicketPage from './pages/TicketPage'
 
@@ -23,13 +21,11 @@ function HomePage() {
       <JourneyMap />
       <main className="min-w-0 overflow-x-hidden">
         <Hero />
+        <Offers />
         <Property />
-        <Commercial />
         <Websites />
         <Portfolio />
         <Packages />
-        <Partners />
-        <Method />
         <Contact />
       </main>
       <Footer />

@@ -4,11 +4,10 @@ import { useI18n } from '../i18n/LanguageContext'
 
 const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:8787'
 
-const TYPE_OPTIONS = ['property', 'commercial', 'web']
+const TYPE_OPTIONS = ['property', 'web']
 
 const TYPE_TO_GROUP = {
   property: 'property',
-  commercial: 'commercial',
   web: 'website',
 }
 

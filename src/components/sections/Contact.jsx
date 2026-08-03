@@ -1,17 +1,15 @@
 import { useEffect, useMemo, useState } from 'react'
 import { useI18n } from '../../i18n/LanguageContext'
 
-const TYPE_OPTIONS = ['property', 'commercial', 'web']
+const TYPE_OPTIONS = ['property', 'web']
 
 const TYPE_TO_GROUP = {
   property: 'property',
-  commercial: 'commercial',
   web: 'website',
 }
 
 const GROUP_TO_TYPE = {
   property: 'property',
-  commercial: 'commercial',
   website: 'web',
 }
 

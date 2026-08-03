@@ -6,19 +6,19 @@ const BRAND = 'Adriatic Web Estate'
 
 const META = {
   en: {
-    title: `${BRAND} | AI Property Video, Commercials & Websites — Germany, Croatia, Switzerland, Greece`,
+    title: `${BRAND} | AI Property Videos & Real Estate Websites — DE · HR · CH · GR`,
     description:
-      'AI property films, AI commercial videos, and SEO-ready websites with databases for real estate and brands in Germany, Croatia, Switzerland, and Greece.',
+      'AI property listing videos and professional websites for real estate agents and agencies in Germany, Croatia, Switzerland, and Greece. Clear packages from 290 CHF.',
   },
   de: {
-    title: `${BRAND} | KI-Immobilienvideo, Werbevideo & Websites — Deutschland, Kroatien, Schweiz, Griechenland`,
+    title: `${BRAND} | KI-Immobilienvideos & Websites für Makler — DE · HR · CH · GR`,
     description:
-      'KI-Immobilienfilme, KI-Werbevideos und SEO-Websites mit Datenbanken für Immobilien und Marken in Deutschland, Kroatien, der Schweiz und Griechenland.',
+      'KI-Immobilienvideos und professionelle Websites für Makler und Agenturen in Deutschland, Kroatien, der Schweiz und Griechenland. Klare Pakete ab 290 CHF.',
   },
   hr: {
-    title: `${BRAND} | AI video za nekretnine, reklame i web — Njemačka, Hrvatska, Švicarska, Grčka`,
+    title: `${BRAND} | AI video za nekretnine i web stranice — DE · HR · CH · GR`,
     description:
-      'AI filmovi za nekretnine, AI reklamni videozapisi i SEO web stranice s bazama podataka za agencije i brendove u Njemačkoj, Hrvatskoj, Švicarskoj i Grčkoj.',
+      'AI listing videi i profesionalne web stranice za agente i agencije u Njemačkoj, Hrvatskoj, Švicarskoj i Grčkoj. Jasni paketi od 290 CHF.',
   },
 }
 
